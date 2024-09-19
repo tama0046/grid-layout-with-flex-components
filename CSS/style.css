@@ -25,8 +25,8 @@ body {
 }
 
 .emoji h2 {
-  margin: 0.5rem 0;
-  border-bottom: 1px solid #bbb;
+  margin: 0 ;
+  border-bottom: 2px solid #ccc;
   font-size: 1.5rem;
   order: 2;
   font-weight: bold;
@@ -35,10 +35,10 @@ body {
 
 .emoji a {
   text-decoration: none;
-  background-color: #8A1B8A;
+  background-color: #781BAA;
   color: white;
-  padding: 0.8rem;
-  border-radius: 5px;
+  padding: 1rem;
+  border-radius: 8px;
   order: 4;
   transition: background-color 0.3s; 
 }
@@ -48,7 +48,7 @@ body {
 }
 
 .icon {
-  font-size: 4.5rem;
+  font-size: 4rem;
   text-align: center;
   margin: 0.5rem 0;
   order: 1;
