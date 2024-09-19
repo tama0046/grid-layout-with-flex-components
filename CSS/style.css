@@ -1,35 +1,77 @@
-/* # Instructions
-
-Fork this repository to start working on the assignment.
-
-Here are the base CSS styles to start with.
-
-```css */
+/* Base styles */
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #222;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  flex-direction: column; /* Stack header and main content vertically */
 }
 
+header.siteheader {
+  text-align: center; /* Center the title */
+  margin-bottom: 2rem; /* Add space below the header */
+}
+
+main {
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Grid layout for emojis */
+.emojis {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Ensure two columns */
+  gap: 1rem;
+}
+
+/* Styles for each emoji card */
 .emoji {
   border: 1px solid #222;
   border-radius: 8px;
   padding: 1rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center content horizontally */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Ensure emoji icon is displayed first */
+.icon {
+  font-size: 4rem;
+  margin: 10px; /* Ensure spacing */
+}
+
+/* Header of the emoji card */
 .emoji h2 {
-  margin: 0;
-  border-bottom: 2px solid #ccc;
+  margin: 0.5rem 0; /* Space above and below the title */
+  text-align: center; /* Center the title text */
+  border-bottom: 2px solid #ccc; /* Underline */
+  padding-bottom: 0.5rem; /* Padding below the underline */
 }
 
+/* Link styling */
 .emoji a {
   text-decoration: none;
   background-color: #781BAA;
   color: white;
   padding: 1rem;
   border-radius: 8px;
+  text-align: center;
 }
 
-.icon {
-  font-size: 4rem;
+/* Flexbox properties for button alignment */
+.emoji p {
+  flex-grow: 1;
+  text-align: center; /* Center paragraph text */
 }
-/* ``` */
+
+/* Optional: Hover effect for links */
+.emoji a:hover {
+  background-color: #661a8f;
+}
