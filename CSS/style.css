@@ -1,77 +1,92 @@
-/* Base styles */
+/* lets play css role  */
+
 body {
   font-family: Arial, Helvetica, sans-serif;
-  color: #222;
+  color: #000;
+  background-color: #f5f5f5; 
   margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f4f4f4;
-  flex-direction: column; /* Stack header and main content vertically */
+  padding: 20px; 
 }
 
-header.siteheader {
-  text-align: center; /* Center the title */
-  margin-bottom: 2rem; /* Add space below the header */
-}
-
-main {
-  width: 90%;
-  max-width: 1200px;
-}
-
-/* Grid layout for emojis */
-.emojis {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Ensure two columns */
-  gap: 1rem;
-}
-
-/* Styles for each emoji card */
 .emoji {
   border: 1px solid #222;
   border-radius: 8px;
   padding: 1rem;
-  background-color: #fff;
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center content horizontally */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.3s, background-color 0.3s; 
 }
 
-/* Ensure emoji icon is displayed first */
-.icon {
-  font-size: 4rem;
-  margin: 10px; /* Ensure spacing */
+.emoji:hover {
+  transform: scale(1.05); 
+  background-color: #e8e8e8; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
-/* Header of the emoji card */
 .emoji h2 {
-  margin: 0.5rem 0; /* Space above and below the title */
-  text-align: center; /* Center the title text */
-  border-bottom: 2px solid #ccc; /* Underline */
-  padding-bottom: 0.5rem; /* Padding below the underline */
+  margin: 0.5rem 0;
+  border-bottom: 1px solid #bbb;
+  font-size: 1.5rem;
+  order: 2;
+  font-weight: bold;
+  color: #333; 
 }
 
-/* Link styling */
 .emoji a {
   text-decoration: none;
-  background-color: #781BAA;
+  background-color: #8A1B8A;
   color: white;
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
+  padding: 0.8rem;
+  border-radius: 5px;
+  order: 4;
+  transition: background-color 0.3s; 
 }
 
-/* Flexbox properties for button alignment */
+.emoji a:hover {
+  background-color: #7A0E7A; 
+}
+
+.icon {
+  font-size: 4.5rem;
+  text-align: center;
+  margin: 0.5rem 0;
+  order: 1;
+}
+
+.emojis {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  max-width: 900px; 
+  margin-left: 0; 
+}
+
 .emoji p {
   flex-grow: 1;
-  text-align: center; /* Center paragraph text */
+  margin-top: 0.5rem;
+  order: 3;
+  color: #222; 
 }
 
-/* Optional: Hover effect for links */
-.emoji a:hover {
-  background-color: #661a8f;
+
+
+/* jus playing media query */
+
+@media (max-width: 600px) {
+  .emojis {
+    grid-template-columns: 1fr; 
+  }
+  
+  .emoji h2 {
+    font-size: 1.3rem; 
+  }
+  
+  .emoji p {
+    font-size: 0.9rem; 
+  }
+  
+  .icon {
+    font-size: 3.5rem; 
+  }
 }
